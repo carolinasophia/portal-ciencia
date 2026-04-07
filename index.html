@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Ciência - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>🚀 Portal Ciência</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="experimentos.html" class="nav-link">Experimentos</a></li>
+                    <li><a href="artigos.html" class="nav-link">Artigos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Interativo -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Descubra os Mistérios do Universo</h1>
+                <p>Explore ciência interativa! Clique nas estrelas para saber mais.</p>
+                <div class="hero-buttons">
+                    <a href="experimentos.html" class="btn btn-primary">🔬 Experimentos</a>
+                    <a href="artigos.html" class="btn btn-secondary">📚 Artigos</a>
+                </div>
+            </div>
+            <div class="hero-image interactive-hero">
+                <canvas id="heroCanvas" width="600" height="600"></canvas>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2>Escolha sua Aventura Científica</h2>
+                <div class="features-grid">
+                    <div class="feature-card interactive-card" onclick="goToExperiments()">
+                        <div class="feature-icon">🔬</div>
+                        <h3>Experimentos</h3>
+                        <p>50+ experimentos práticos em casa</p>
+                        <div class="card-sparkle"></div>
+                    </div>
+                    <div class="feature-card interactive-card" onclick="goToArticles()">
+                        <div class="feature-icon">📚</div>
+                        <h3>Artigos</h3>
+                        <p>Conteúdo profundo e atualizado</p>
+                        <div class="card-sparkle"></div>
+                    </div>
+                    <div class="feature-card interactive-card" onclick="launchQuiz()">
+                        <div class="feature-icon">🎓</div>
+                        <h3>Quiz Rápido</h3>
+                        <p>Teste seus conhecimentos agora</p>
+                        <div class="card-sparkle"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mini Quiz Interativo -->
+        <section class="quiz-section">
+            <div class="container">
+                <h2>🧠 Quiz Científico Rápido</h2>
+                <div class="quiz-container">
+                    <div class="quiz-question" id="quizQuestion">
+                        Qual elemento químico forma o vulcão caseiro?
+                    </div>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" onclick="quizAnswer('A')">A) Hidrogênio</button>
+                        <button class="quiz-btn" onclick="quizAnswer('B')">B) Bicarbonato de sódio</button>
+                        <button class="quiz-btn" onclick="quizAnswer('C')">C) Oxigênio</button>
+                    </div>
+                    <div class="quiz-score" id="quizScore" style="display:none;"></div>
+                </div>
+                <button class="btn btn-primary" onclick="newQuiz()">Novo Quiz</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            &copy; 2026 Portal de Ciência. Todos os direitos reservados. | Totalmente interativo!
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
