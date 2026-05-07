@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experimentos - Portal de Ciência</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../portal-ciencia/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -18,8 +18,8 @@
                     <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="experimentos.html" class="nav-link active">Experimentos</a></li>
                     <li><a href="artigos.html" class="nav-link">Artigos</a></li>
-                    <li><a href="../login.html" class="nav-link">login</a></li>
-                    <li><a href="../cadastro.html" class="nav-link">cadastro</a></li>
+                    <li><a href="../portal-ciencia/login.html" class="nav-link">login</a></li>
+                    <li><a href="../portal-ciencia/cadastro.html" class="nav-link">cadastro</a></li>
                 
                 </ul>
             </div>
@@ -27,6 +27,9 @@
     </header>
 
     <main>
+    
+        
+        
         <section class="page-header">
             <div class="container">
                 <h1>Experimentos Científicos</h1>
@@ -34,7 +37,16 @@
             </div>
         </section>
 
+ 
+
         <section class="experiments">
+
+       <input 
+        type="text" 
+        id="barraBusca" 
+        placeholder="Pesquisar artigos..."
+        >   
+
             <div class="container">
                 <div class="experiment-grid">
                     <div class="experiment-card">
@@ -86,6 +98,9 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+   <script src="../portal-ciencia/js/dados.js"></script>
+    <script src="../portal-ciencia/js/busca.js"></script>
+    <script src="../portal-ciencia/js/script.js"></script>
+    <script src="js/busca.js"></script>
 </body>
 </html>

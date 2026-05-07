@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal de Ciência - Home</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../portal-ciencia/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../portal-ciencia/css/busca.css">
 </head>
 <body>
     <header>
@@ -19,13 +20,14 @@
                     <li><a href="index.html" class="nav-link active">Home</a></li>
                     <li><a href="experimentos.html" class="nav-link">Experimentos</a></li>
                     <li><a href="artigos.html" class="nav-link">Artigos</a></li>
-                    <li><a href="../login.html" class="nav-link">login</a></li>
-                    <li><a href="../cadastro.html" class="nav-link">cadastro</a></li>
+                    <li><a href="../portal-ciencia/login.html" class="nav-link">login</a></li>
+                    <li><a href="../portal-ciencia/cadastro.html" class="nav-link">cadastro</a></li>
 
                 </ul>
             </div>
         </nav>
     </header>
+
 
     <main>
         <!-- Hero Interativo -->
@@ -43,6 +45,27 @@
             </div>
         </section>
 
+        <section class="busca">
+    <div class="container">
+        <h2>🔎 Explore o conteúdo</h2>
+
+        <input 
+            type="text" 
+            id="search" 
+            placeholder="Buscar por palavras-chave..."
+            onkeyup="filtrarConteudo()"
+        >
+
+        <select id="categoria" onchange="filtrarConteudo()">
+            <option>Todas</option>
+            <option>Astronomia</option>
+            <option>Física</option>
+            <option>Química</option>
+        </select>
+
+        <div id="resultados"></div>
+    </div>
+</section>
         <section class="features">
             <div class="container">
                 <h2>Escolha sua Aventura Científica</h2>
@@ -72,6 +95,8 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="../portal-ciencia/js/dados.js"></script>
+    <script src="../portal-ciencia/js/busca.js"></script>
+    <script src="../portal-ciencia/js/script.js"></script>
 </body>
 </html>

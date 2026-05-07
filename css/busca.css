@@ -1,0 +1,16 @@
+#search {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 0 10px #00e0ff;
+  background: #0f172a;
+  color: white;
+}
+
+.card {
+  background: #0f172a;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0 0 10px rgba(0,224,255,0.2);
+}
