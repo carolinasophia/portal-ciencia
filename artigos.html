@@ -4,104 +4,184 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artigos - Portal de Ciência</title>
-    <link rel="stylesheet" href="../portal-ciencia/css/styles.css">
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/busca.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
     <header>
         <nav class="navbar">
+
             <div class="nav-container">
+
                 <div class="logo">
                     <h2>🚀 Portal Ciência</h2>
                 </div>
+
                 <ul class="nav-menu">
                     <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="experimentos.html" class="nav-link">Experimentos</a></li>
                     <li><a href="artigos.html" class="nav-link active">Artigos</a></li>
-                    <li><a href="../portal-ciencia/login.html" class="nav-link">login</a></li>
-                    <li><a href="../portal-ciencia/cadastro.html" class="nav-link">cadastro</a></li>
-
-                
+                    <li><a href="/login.html" class="nav-link">login</a></li>
+                    <li><a href="/cadastro.html" class="nav-link">cadastro</a></li>
                 </ul>
+
             </div>
+
         </nav>
     </header>
 
     <main>
-       
-       <section class="busca">
-    <div class="container">
-        <input 
-            type="text" 
-            id="search" 
-            placeholder="Buscar..."
-            onkeyup="filtrarConteudo()"
-        >
 
-        <select id="categoria" onchange="filtrarConteudo()">
-            <option>Todas</option>
-            <option>Astronomia</option>
-            <option>Física</option>
-            <option>Química</option>
-        </select>
-
-        <div id="resultados"></div>
-    </div>
-</section>
-       
         <section class="page-header">
+
             <div class="container">
                 <h1>Artigos Científicos</h1>
                 <p>Conhecimento atualizado sobre ciência e tecnologia</p>
             </div>
+
         </section>
 
         <section class="articles">
-            <div class="container">
-                <div class="article-grid">
-                    <article class="article-card">
-                        <div class="article-image">
-                            <img src="../portal-ciencia/img/buracos-negros-o-que-sao-teorias-e-atualizacoes.png" alt="Buraco negro supermassivo" loading="lazy">
-                        </div>
-                        <div class="article-content">
-                            <h3>Os Segredos dos Buracos Negros</h3>
-                            <p>Descubra como os buracos negros desafiam nossa compreensão do espaço-tempo.</p>
-                            <span class="article-date"> 1971</span>
-                        </div>
-                    </article>
-                    <article class="article-card">
-                        <div class="article-image">
-                            <img src="../portal-ciencia/img/crispr.jpg" alt="Estrutura molecular CRISPR" loading="lazy">
-                        </div>
-                        <div class="article-content">
-                            <h3>CRISPR: A Revolução na Edição Genética</h3>
-                            <p>Como a tecnologia CRISPR está transformando a medicina e a agricultura.</p>
-                            <span class="article-date">junho de 2012.</span>
-                        </div>
-                    </article>
-                    <article class="article-card">
-                        <div class="article-image">
-                            <img src="../portal-ciencia/img/computador quantico.jpg" alt="Computador quântico IBM" loading="lazy">
-                        </div>
-                        <div class="article-content">
-                            <h3>Computação Quântica: O Futuro Já Chegou</h3>
-                            <p>Entenda como os computadores quânticos mudarão o mundo.</p>
-                            <span class="article-date">início da década de 1980</span>
-                        </div>
-                    </article>
+
+            <!-- BARRA DE PESQUISA -->
+            <section class="busca">
+
+                <div class="container">
+
+                    <input 
+                        type="text" 
+                        id="barraBusca" 
+                        placeholder="Pesquisar artigos..."
+                    >
+
+                    <div id="resultados"></div>
+
                 </div>
+
+            </section>
+
+            <!-- CARDS DOS ARTIGOS -->
+            <div class="container">
+
+                <div class="article-grid">
+
+                    <!-- ARTIGO 1 -->
+                    <article 
+                        class="article-card card" 
+                        data-titulo="Os Segredos dos Buracos Negros"
+                    >
+
+                        <div class="article-image">
+
+                            <img 
+                                src="/img/buracos-negros-o-que-sao-teorias-e-atualizacoes.png"
+                                alt="Buraco negro supermassivo"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="article-content">
+
+                            <h3>Os Segredos dos Buracos Negros</h3>
+
+                            <p>
+                                Descubra como os buracos negros desafiam nossa compreensão do espaço-tempo.
+                            </p>
+
+                            <span class="article-date">1971</span>
+
+                        </div>
+
+                    </article>
+
+                    <!-- ARTIGO 2 -->
+                    <article 
+                        class="article-card card" 
+                        data-titulo="CRISPR A Revolução na Edição Genética"
+                    >
+
+                        <div class="article-image">
+
+                            <img 
+                                src="/img/crispr.jpg"
+                                alt="Estrutura molecular CRISPR"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="article-content">
+
+                            <h3>CRISPR: A Revolução na Edição Genética</h3>
+
+                            <p>
+                                Como a tecnologia CRISPR está transformando a medicina e a agricultura.
+                            </p>
+
+                            <span class="article-date">Junho de 2012</span>
+
+                        </div>
+
+                    </article>
+
+                    <!-- ARTIGO 3 -->
+                    <article 
+                        class="article-card card" 
+                        data-titulo="Computação Quântica O Futuro Já Chegou"
+                    >
+
+                        <div class="article-image">
+
+                            <img 
+                                src="/img/computador quantico.jpg"
+                                alt="Computador quântico IBM"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <div class="article-content">
+
+                            <h3>Computação Quântica: O Futuro Já Chegou</h3>
+
+                            <p>
+                                Entenda como os computadores quânticos mudarão o mundo.
+                            </p>
+
+                            <span class="article-date">
+                                Início da década de 1980
+                            </span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
             </div>
+
         </section>
+
     </main>
 
     <footer>
+
         <div class="container">
             &copy; 2026 Portal de Ciência. Todos os direitos reservados.
         </div>
+
     </footer>
 
-    <script src="../portal-ciencia/js/dados.js"></script>
-    <script src="../portal-ciencia/js/busca.js"></script>
-    <script src="../portal-ciencia/js/script.js"></script>
+    <!-- SCRIPTS -->
+    <script src="/js/dados.js"></script>
+    <script src="/js/busca.js"></script>
+    <script src="/js/script.js"></script>
+
 </body>
 </html>

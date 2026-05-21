@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experimentos - Portal de Ciência</title>
-    <link rel="stylesheet" href="../portal-ciencia/css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/busca.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -18,8 +20,8 @@
                     <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="experimentos.html" class="nav-link active">Experimentos</a></li>
                     <li><a href="artigos.html" class="nav-link">Artigos</a></li>
-                    <li><a href="../portal-ciencia/login.html" class="nav-link">login</a></li>
-                    <li><a href="../portal-ciencia/cadastro.html" class="nav-link">cadastro</a></li>
+                    <li><a href="/login.html" class="nav-link">login</a></li>
+                    <li><a href="/cadastro.html" class="nav-link">cadastro</a></li>
                 
                 </ul>
             </div>
@@ -44,51 +46,66 @@
        <input 
         type="text" 
         id="barraBusca" 
-        placeholder="Pesquisar artigos..."
+        placeholder="Pesquisar experimentos..."
         >   
 
-            <div class="container">
-                <div class="experiment-grid">
-                    <div class="experiment-card">
-                        <img src="../portal-ciencia/img/partes-vulcao.webp" alt="Vulcão químico caseiro" loading="lazy">
-                        <div class="experiment-content">
-                            <h3>Vulcão Caseiro</h3>
-                            <p><strong>Como fazer:</strong> 3 colheres de bicarbonato + corante + 1/2 xícara de vinagre!</p>
-                            <div class="experiment-tags">
-                                <span class="tag">Química</span>
-                                <span class="tag">Fácil</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="experiment-card">
-                        <img src="../portal-ciencia/img/eletrons.webp" alt="Eletricidade estática em ação" loading="lazy">
-                        <div class="experiment-content">
-                            <h3>Dança dos Elétrons</h3>
-                            <p><strong>Como fazer:</strong> Balão esfregado no cabelo + papel picado ou bolinhas de isopor leve!</p>
-                            <div class="experiment-tags">
-                                <span class="tag">Física</span>
-                                <span class="tag">Médio</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="experiment-card">
-                        <img src="../portal-ciencia/img/cristal.jpg" alt="Cristais coloridos caseiros" loading="lazy">
-                        <div class="experiment-content">
-                            <h3>Cristais Mágicos</h3>
-                            <p><strong>Como fazer:</strong> Sal + água quente + barbante + corante alimentício. Deixe 24h!</p>
-                            <div class="experiment-tags">
-                                <span class="tag">Química</span>
-                                <span class="tag">Fácil</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="interactive-section">
-                    <h3>🔬 Simulador Interativo</h3>
-                    <canvas id="scienceCanvas" width="800" height="400"></canvas>
-                    <p>Use o mouse para interagir com as partículas!</p>
-                </div>
+            <div class="experiment-grid">
+
+    <div class="experiment-card card" data-titulo="Vulcão Caseiro">
+        <img src="/img/partes-vulcao.webp">
+
+        <div class="experiment-content">
+            <h3>Vulcão Caseiro</h3>
+
+            <p>
+                <strong>Como fazer:</strong>
+                3 colheres de bicarbonato + corante + 1/2 xícara de vinagre!
+            </p>
+
+            <div class="experiment-tags">
+                <span class="tag">Química</span>
+                <span class="tag">Fácil</span>
             </div>
+        </div>
+    </div>
+
+    <div class="experiment-card card" data-titulo="Dança dos Elétrons">
+        <img src="/img/eletrons.webp">
+
+        <div class="experiment-content">
+            <h3>Dança dos Elétrons</h3>
+
+            <p>
+                <strong>Como fazer:</strong>
+                Balão esfregado no cabelo + papel picado ou bolinhas de isopor leve!
+            </p>
+
+            <div class="experiment-tags">
+                <span class="tag">Física</span>
+                <span class="tag">Médio</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="experiment-card card" data-titulo="Cristais Mágicos">
+        <img src="/img/cristal.jpg">
+
+        <div class="experiment-content">
+            <h3>Cristais Mágicos</h3>
+
+            <p>
+                <strong>Como fazer:</strong>
+                Sal + água quente + barbante + corante alimentício. Deixe 24h!
+            </p>
+
+            <div class="experiment-tags">
+                <span class="tag">Química</span>
+                <span class="tag">Fácil</span>
+            </div>
+        </div>
+    </div>
+
+</div>
         </section>
     </main>
 
@@ -98,9 +115,8 @@
         </div>
     </footer>
 
-   <script src="../portal-ciencia/js/dados.js"></script>
-    <script src="../portal-ciencia/js/busca.js"></script>
-    <script src="../portal-ciencia/js/script.js"></script>
-    <script src="js/busca.js"></script>
+   <script src="/js/dados.js"></script>
+    <script src="/js/busca.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 </html>

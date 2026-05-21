@@ -1,16 +1,14 @@
-#search {
-  padding: 10px;
-  border-radius: 20px;
-  border: none;
-  box-shadow: 0 0 10px #00e0ff;
-  background: #0f172a;
-  color: white;
+#barraBusca {
+  width: 350px;
+  padding: 12px;
+  margin: 20px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
 }
 
-.card {
-  background: #0f172a;
-  padding: 15px;
-  border-radius: 10px;
-  margin-top: 10px;
-  box-shadow: 0 0 10px rgba(0,224,255,0.2);
-}
+#barraBusca:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 8px rgba(108, 99, 255, 0.4);
+} 
