@@ -30,8 +30,6 @@
 
     <main>
     
-        
-        
         <section class="page-header">
             <div class="container">
                 <h1>Experimentos Científicos</h1>
@@ -39,73 +37,97 @@
             </div>
         </section>
 
- 
-
         <section class="experiments">
 
-       <input 
-        type="text" 
-        id="barraBusca" 
-        placeholder="Pesquisar experimentos..."
-        >   
+            <input 
+            type="text" 
+            id="barraBusca" 
+            placeholder="Pesquisar experimentos..."
+            >   
+
+            <!-- MENSAGEM DE ERRO -->
+            <p id="mensagemErro" style="display: none; color: black; margin-top: 10px;">
+                Experimento não encontrado.
+            </p>
 
             <div class="experiment-grid">
 
-    <div class="experiment-card card" data-titulo="Vulcão Caseiro">
-        <img src="img/partes-vulcao.webp">
+                <!-- VULCÃO -->
+                <div 
+                class="experiment-card card" 
+                data-titulo="Vulcão Caseiro"
+                onclick="window.location.href='vulcao.html'">
 
-        <div class="experiment-content">
-            <h3>Vulcão Caseiro</h3>
+                    <img 
+                    src="img/partes-vulcao.webp"
+                    alt="Vulcão Caseiro">
 
-            <p>
-                <strong>Como fazer:</strong>
-                3 colheres de bicarbonato + corante + 1/2 xícara de vinagre!
-            </p>
+                    <div class="experiment-content">
+                        <h3>Vulcão Caseiro</h3>
 
-            <div class="experiment-tags">
-                <span class="tag">Química</span>
-                <span class="tag">Fácil</span>
+                        <p>
+                            <strong>Como fazer:</strong>
+                            3 colheres de bicarbonato + corante + 1/2 xícara de vinagre!
+                        </p>
+
+                        <div class="experiment-tags">
+                            <span class="tag">Química</span>
+                            <span class="tag">Fácil</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ELÉTRONS -->
+                <div 
+                class="experiment-card card" 
+                data-titulo="Dança dos Elétrons"
+                onclick="window.location.href='eletrons.html'">
+
+                    <img 
+                    src="img/eletrons.webp"
+                    alt="Dança dos Elétrons">
+
+                    <div class="experiment-content">
+                        <h3>Dança dos Elétrons</h3>
+
+                        <p>
+                            <strong>Como fazer:</strong>
+                            Balão esfregado no cabelo + papel picado ou bolinhas de isopor leve!
+                        </p>
+
+                        <div class="experiment-tags">
+                            <span class="tag">Física</span>
+                            <span class="tag">Médio</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CRISTAIS -->
+                <div 
+                class="experiment-card card" 
+                data-titulo="Cristais Mágicos"
+                onclick="window.location.href='cristais.html'">
+
+                    <img 
+                    src="img/cristal.jpg"
+                    alt="Cristais Mágicos">
+
+                    <div class="experiment-content">
+                        <h3>Cristais Mágicos</h3>
+
+                        <p>
+                            <strong>Como fazer:</strong>
+                            Sal + água quente + barbante + corante alimentício. Deixe 24h!
+                        </p>
+
+                        <div class="experiment-tags">
+                            <span class="tag">Química</span>
+                            <span class="tag">Fácil</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-        </div>
-    </div>
-
-    <div class="experiment-card card" data-titulo="Dança dos Elétrons">
-        <img src="img/eletrons.webp">
-
-        <div class="experiment-content">
-            <h3>Dança dos Elétrons</h3>
-
-            <p>
-                <strong>Como fazer:</strong>
-                Balão esfregado no cabelo + papel picado ou bolinhas de isopor leve!
-            </p>
-
-            <div class="experiment-tags">
-                <span class="tag">Física</span>
-                <span class="tag">Médio</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="experiment-card card" data-titulo="Cristais Mágicos">
-        <img src="img/cristal.jpg">
-
-        <div class="experiment-content">
-            <h3>Cristais Mágicos</h3>
-
-            <p>
-                <strong>Como fazer:</strong>
-                Sal + água quente + barbante + corante alimentício. Deixe 24h!
-            </p>
-
-            <div class="experiment-tags">
-                <span class="tag">Química</span>
-                <span class="tag">Fácil</span>
-            </div>
-        </div>
-    </div>
-
-</div>
         </section>
     </main>
 
@@ -115,7 +137,7 @@
         </div>
     </footer>
 
-   <script src="js/dados.js"></script>
+    <script src="js/dados.js"></script>
     <script src="js/busca.js"></script>
     <script src="js/script.js"></script>
 </body>
