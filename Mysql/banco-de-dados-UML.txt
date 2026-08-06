@@ -1,0 +1,116 @@
+-- 1. Tabela de Usuários (Pode ser leitor, escritor ou admin)
+CREATE TABLE Usuarios (
+    id_usuario INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    senha VARCHAR(255) NOT NULL, -- Sempre criptografada!
+    tipo_usuario ENUM('leitor', 'escritor', 'admin') DEFAULT 'leitor',
+    data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 2. Tabela de Artigos (Garante a associação com o Escritor)
+CREATE TABLE Artigos (
+    id_artigo INT PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(255) NOT NULL,
+    conteudo TEXT NOT NULL,
+    imagem_url VARCHAR(255),
+    ano_descoberta VARCHAR(50), -- Ex: "1971", "Junho de 2012"
+    id_autor INT,
+    data_publicacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_autor) REFERENCES Usuarios(id_usuario) ON DELETE SET NULL
+);
+
+-- 3. Tabela de Experimentos
+CREATE TABLE Experimentos (
+    id_experimento INT PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(255) NOT NULL,
+    como_fazer TEXT NOT NULL,
+    imagem_url VARCHAR(255),
+    materia ENUM('Química', 'Física', 'Biologia') NOT NULL,
+    dificuldade ENUM('Fácil', 'Médio', 'Difícil') NOT NULL
+);
+
+-- 4. Tabela de Comentários Interativos
+CREATE TABLE Comentarios (
+    id_comentario INT PRIMARY KEY AUTO_INCREMENT,
+    texto TEXT NOT NULL,
+    data_envio TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    id_usuario INT NOT NULL,
+    
+    -- Chaves estrangeiras opcionais para permitir comentários tanto em artigos quanto em experimentos
+    id_artigo INT DEFAULT NULL,
+    id_experimento INT DEFAULT NULL,
+    
+    -- Para permitir comentários interativos (respostas a outros comentários)
+    id_comentario_pai INT DEFAULT NULL, 
+
+    FOREIGN KEY (id_usuario) REFERENCES Usuarios(id_usuario) ON DELETE CASCADE,
+    FOREIGN KEY (id_artigo) REFERENCES Artigos(id_artigo) ON DELETE CASCADE,
+    FOREIGN KEY (id_experimento) REFERENCES Experimentos(id_experimento) ON DELETE CASCADE,
+    FOREIGN KEY (id_comentario_pai) REFERENCES Comentarios(id_comentario) ON DELETE CASCADE
+);  
+
+
+//////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+
+
+1. Listagem dos Campos das Tabelas
+Aqui está o dicionário de dados simplificado com os campos, tipos e funções de cada tabela:
+
+Tabela: Usuarios
+id_usuario (INT, Chave Primária): Identificador único de cada usuário.
+
+nome (VARCHAR): Nome completo do usuário.
+
+email (VARCHAR): E-mail do usuário (único, usado para login).
+
+senha (VARCHAR): Senha criptografada do usuário.
+
+tipo_usuario (ENUM): Define o nível de acesso ('leitor', 'escritor', 'admin').
+
+data_cadastro (TIMESTAMP): Registra o dia e horário que a conta foi criada.
+
+Tabela: Artigos
+id_artigo (INT, Chave Primária): Identificador único do artigo.
+
+titulo (VARCHAR): Título do artigo (ex: "Os Segredos dos Buracos Negros").
+
+conteudo (TEXT): O texto completo do artigo.
+
+imagem_url (VARCHAR): Link da imagem que aparece no card do artigo.
+
+ano_descoberta (VARCHAR): Ano ou data histórica exibida no card (ex: "1971").
+
+id_autor (INT, Chave Estrangeira): Aponta para o id_usuario que escreveu o texto.
+
+data_publicacao (TIMESTAMP): Data em que o artigo foi ao ar.
+
+Tabela: Experimentos
+id_experimento (INT, Chave Primária): Identificador único do experimento.
+
+titulo (VARCHAR): Nome da atividade (ex: "Vulcão Caseiro").
+
+como_fazer (TEXT): Receita ou instruções do experimento.
+
+imagem_url (VARCHAR): Link da ilustração/foto do experimento.
+
+materia (ENUM): Categoria científica ('Química', 'Física', 'Biologia').
+
+dificuldade (ENUM): Nível de complexidade ('Fácil', 'Médio', 'Difícil').
+
+Tabela: Comentarios
+id_comentario (INT, Chave Primária): Identificador único do comentário.
+
+texto (TEXT): Mensagem digitada pelo usuário.
+
+data_envio (TIMESTAMP): Data e hora do envio.
+
+id_usuario (INT, Chave Estrangeira): Quem enviou o comentário.
+
+id_artigo (INT, Chave Estrangeira, Opcional): Qual artigo está recebendo o comentário.
+
+id_experimento (INT, Chave Estrangeira, Opcional): Qual experimento está recebendo o comentário.
+
+id_comentario_pai (INT, Chave Estrangeira, Opcional): Cria o recurso interativo. Se o campo estiver preenchido com o ID de outro comentário, significa que este comentário é uma resposta direta a ele.

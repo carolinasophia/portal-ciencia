@@ -12,3 +12,13 @@
   border-color: #6c63ff;
   box-shadow: 0 0 8px rgba(108, 99, 255, 0.4);
 }
+
+/* CARDS CLICÁVEIS */
+.article-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-8px);
+}

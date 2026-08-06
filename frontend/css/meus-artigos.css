@@ -1,0 +1,262 @@
+/* =========================
+   MEUS ARTIGOS
+========================= */
+
+body {
+    margin: 0;
+    background: #171748;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Área principal (compensa a navbar fixa) */
+.meus-artigos-main {
+    min-height: calc(100vh - 70px - 60px);
+    padding: 90px 20px 40px;
+    background: linear-gradient(135deg, #171748 0%, #1a1f4d 100%);
+}
+
+/* Título da página */
+.titulo-pagina {
+    color: #00cfff;
+    text-align: center;
+    font-family: 'Orbitron', monospace;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px #00cfff;
+}
+
+/* Cards gerais */
+.card {
+    background: #111133;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 207, 255, 0.3);
+    padding: 30px;
+    margin-bottom: 30px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card h2 {
+    color: #00cfff;
+    font-family: 'Orbitron', monospace;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Formulário */
+.perfil-info textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: #202050;
+    color: white;
+    font-size: 15px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    resize: vertical;
+}
+
+/* Input de arquivo */
+.perfil-info input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 207, 255, 0.4);
+    background: #202050;
+    color: white;
+    font-size: 14px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+/* Pré-visualização da imagem do artigo */
+.preview-imagem {
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #00cfff;
+    max-width: 300px;
+}
+
+.preview-imagem img {
+    display: block;
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+#btnPublicar {
+    margin-top: 25px;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #00cfff, #0099cc);
+    color: black;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+#btnPublicar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 207, 255, 0.6);
+}
+
+/* Lista de artigos */
+#listaArtigos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.carregando,
+.sem-artigos {
+    color: rgba(255,255,255,0.7);
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
+}
+
+/* Card de cada artigo publicado */
+.meu-artigo {
+    background: #1a1a4e;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 207, 255, 0.2);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    transition: 0.3s;
+}
+
+.meu-artigo:hover {
+    border-color: #00cfff;
+    box-shadow: 0 0 20px rgba(0, 207, 255, 0.2);
+}
+
+.meu-artigo-info {
+    flex: 1;
+}
+
+.meu-artigo-info h3 {
+    color: #00cfff;
+    margin-bottom: 8px;
+}
+
+.meu-artigo-info p {
+    color: white;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.meu-artigo-info img {
+    max-width: 100%;
+    max-height: 150px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.meu-artigo-data {
+    color: rgba(255,255,255,0.6);
+    font-size: 13px;
+}
+
+/* Ações do artigo (editar/excluir) */
+.meu-artigo-acoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-self: center;
+    white-space: nowrap;
+}
+
+/* Botão editar */
+.btnEditar {
+    background: linear-gradient(135deg, #00cfff, #0099cc);
+    color: black;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btnEditar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 207, 255, 0.5);
+}
+
+/* Botão excluir */
+.btnExcluir {
+    background: #ff3b3b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.btnExcluir:hover {
+    background: #d50000;
+    transform: scale(1.05);
+}
+
+/* Botão cancelar edição */
+#btnCancelarEdicao {
+    margin-top: 10px;
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ff3b3b;
+    border-radius: 10px;
+    background: transparent;
+    color: #ff3b3b;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+#btnCancelarEdicao:hover {
+    background: #ff3b3b;
+    color: white;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .meu-artigo {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .meu-artigo-acoes {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .meu-artigo-acoes .btnEditar,
+    .meu-artigo-acoes .btnExcluir {
+        flex: 1;
+        width: auto;
+    }
+}

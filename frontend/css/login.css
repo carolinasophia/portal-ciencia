@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-<meta charset="UTF-8">
-<title>Login - Portal Ciência</title>
-<style>
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -62,21 +57,3 @@ a {
     text-decoration: none;
     font-size: 14px;
 }
-</style>
-</head>
-
-<body>
-<div class="container">
-    <div class="card">
-        <h1>Login</h1>
-
-        <input type="email" placeholder="Email">
-        <input type="password" placeholder="Senha">
-
-        <button>Entrar</button>
-
-        <p>Não tem conta? <a href="/cadastro.html">Cadastre-se</a></p>
-    </div>
-</div>
-</body>
-</html>

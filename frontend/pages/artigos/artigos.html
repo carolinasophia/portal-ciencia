@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artigos - Portal de Ciência</title>
 
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/busca.css">
+    <link rel="stylesheet" href="/frontend/css/styles.css">
+    <link rel="stylesheet" href="/frontend/css/busca.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
     <header>
         <nav class="navbar">
 
@@ -22,13 +21,30 @@
                     <h2>🚀 Portal Ciência</h2>
                 </div>
 
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="experimentos.html" class="nav-link">Experimentos</a></li>
-                    <li><a href="artigos.html" class="nav-link active">Artigos</a></li>
-                    <li><a href="login.html" class="nav-link">login</a></li>
-                    <li><a href="cadastro.html" class="nav-link">cadastro</a></li>
+<ul class="nav-menu">
+                <li><a href="/frontend/pages/index.html" class="nav-link">Home</a></li>
+                    <li><a href="/frontend/pages/experimentos.html" class="nav-link">Experimentos</a></li>
+                    <li><a href="/frontend/pages/artigos/artigos.html" class="nav-link active">Artigos</a></li>
+                    <li id="menuLogin"><a href="/frontend/pages/login.html" class="nav-link">login</a></li>
+                    <li id="menuCadastro"><a href="/frontend/pages/cadastro.html" class="nav-link">cadastro</a></li>
                 </ul>
+
+                <!-- Perfil do Usuário -->
+                <div id="perfilUsuario" class="perfil-usuario" style="display:none;">
+                    <div class="perfil-menu">
+                        <div class="avatar" id="avatarUsuario">👤</div>
+                        <span id="nomeUsuario"></span>
+                        <span class="seta">▼</span>
+                        <div class="dropdown">
+                            <a href="/frontend/pages/perfil.html">👤 Meu Perfil</a>
+                            <a href="/frontend/pages/editar-perfil.html">✏️ Editar Perfil</a>
+                            <a href="/frontend/pages/alterar-senha.html">🔒 Alterar Senha</a>
+                            <a href="/frontend/pages/artigos/artigos.html">📄 Meus Artigos</a>
+                            <hr>
+                            <a href="#" id="btnLogout">🚪 Sair</a>
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
@@ -62,24 +78,32 @@
                     <div id="resultados"></div>
 
                 </div>
-
+                 <!-- MENSAGEM DE ERRO -->
+            <p id="mensagemErro" style="display: none; color: black; margin-top: 10px;">
+                Artigos não encontrado.
+            </p>
             </section>
 
-            <!-- CARDS DOS ARTIGOS -->
+<!-- CARDS DOS ARTIGOS -->
             <div class="container">
+
+                <h2 style="font-family:'Orbitron',monospace;color:#0c0c2e;margin-bottom:20px;text-align:center;">
+                    📚 Todos os Artigos
+                </h2>
 
                 <div class="article-grid">
 
                     <!-- ARTIGO 1 -->
                     <article 
-                        class="article-card card" 
-                        data-titulo="Os Segredos dos Buracos Negros"
-                    >
+                    class="article-card card" 
+                    data-titulo="Os Segredos dos Buracos Negros"
+                    onclick="window.location.href='artigo-buracos-negros.html'"
+                >
 
                         <div class="article-image">
 
                             <img 
-                                src="img/buracos-negros-o-que-sao-teorias-e-atualizacoes.png"
+                                src="/frontend/img/buracos-negros-o-que-sao-teorias-e-atualizacoes.png"
                                 alt="Buraco negro supermassivo"
                                 loading="lazy"
                             >
@@ -102,14 +126,15 @@
 
                     <!-- ARTIGO 2 -->
                     <article 
-                        class="article-card card" 
-                        data-titulo="CRISPR A Revolução na Edição Genética"
-                    >
+                    class="article-card card" 
+                    data-titulo="CRISPR A Revolução na Edição Genética"
+                    onclick="window.location.href='artigo-crispr.html'"
+                >
 
                         <div class="article-image">
 
                             <img 
-                                src="img/crispr.jpg"
+                                src="/frontend/img/crispr.jpg"
                                 alt="Estrutura molecular CRISPR"
                                 loading="lazy"
                             >
@@ -132,14 +157,14 @@
 
                     <!-- ARTIGO 3 -->
                     <article 
-                        class="article-card card" 
-                        data-titulo="Computação Quântica O Futuro Já Chegou"
-                    >
-
+                    class="article-card card" 
+                    data-titulo="Computação Quântica O Futuro Já Chegou"
+                    onclick="window.location.href='artigo-computacao-quantica.html'"
+                >
                         <div class="article-image">
 
                             <img 
-                                src="img/computador quantico.jpg"
+                                src="/frontend/img/computador quantico.jpg"
                                 alt="Computador quântico IBM"
                                 loading="lazy"
                             >
@@ -178,10 +203,13 @@
 
     </footer>
 
-    <!-- SCRIPTS -->
-    <script src="js/dados.js"></script>
-    <script src="js/busca.js"></script>
-    <script src="js/script.js"></script>
+<!-- SCRIPTS -->
+    <script src="/frontend/js/dados.js"></script>
+    <script src="/frontend/js/busca.js"></script>
+    <script src="/frontend/js/script.js"></script>
+<script src="/frontend/js/menu.js"></script>
+
+    <script src="/frontend/js/artigos.js"></script>
 
 </body>
 </html>

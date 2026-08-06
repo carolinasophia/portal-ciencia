@@ -44,7 +44,6 @@ JavaScript
 Framework Front-end (ex: React, Vue ou outro)
 API / Back-end (se tiver)
 Banco de dados (se tiver)
-Integração com Inteligência Artificial
 
 📱 Responsividade
 
@@ -64,4 +63,3 @@ Controle de acesso às funcionalidades
 
 ✔️ Front-end finalizado
 🔄 Back-end (caso ainda esteja em desenvolvimento)
-🔄 Integrações com IA

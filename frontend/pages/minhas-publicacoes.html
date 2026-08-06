@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Publicações - Portal Ciência</title>
+
+    <link rel="stylesheet" href="/frontend/css/styles.css">
+    <link rel="stylesheet" href="/frontend/css/minhas-publicacoes.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="nav-container">
+
+                <div class="logo">
+                    <h2>🚀 Portal Ciência</h2>
+                </div>
+
+                <ul class="nav-menu">
+
+                    <li>
+                        <a href="/frontend/pages/index.html" class="nav-link">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="/frontend/pages/experimentos.html" class="nav-link">Experimentos</a>
+                    </li>
+
+                    <li>
+                        <a href="/frontend/pages/artigos/artigos.html" class="nav-link">Artigos</a>
+                    </li>
+
+                </ul>
+
+                <!-- Perfil do Usuário -->
+                <div id="perfilUsuario" class="perfil-usuario" style="display:none;">
+
+                    <div class="perfil-menu">
+
+                        <div class="avatar" id="avatarUsuario">
+                            👤
+                        </div>
+
+                        <span id="nomeUsuario"></span>
+
+                        <span class="seta">▼</span>
+
+                        <div class="dropdown">
+
+                            <a href="/frontend/pages/perfil.html">
+                                👤 Meu Perfil
+                            </a>
+
+                            <a href="/frontend/pages/editar-perfil.html">
+                                ✏️ Editar Perfil
+                            </a>
+
+                            <a href="/frontend/pages/alterar-senha.html">
+                                🔒 Alterar Senha
+                            </a>
+
+                            <a href="/frontend/pages/artigos/meus-artigos.html">
+                                📄 Meus Artigos
+                            </a>
+
+                            <a href="/frontend/pages/minhas-publicacoes.html">
+                                🎬 Minhas Publicações
+                            </a>
+
+                            <hr>
+
+                            <a href="#" id="btnLogout">
+                                🚪 Sair
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main class="publicacoes-main">
+
+        <div class="publicacoes-container">
+
+            <!-- Cabeçalho estilo YouTube -->
+            <div class="canal-cabecalho">
+
+                <div class="canal-banner">
+                    <h1>🎬 Minhas Publicações</h1>
+                    <p>Assista e gerencie todo o seu conteúdo em um só lugar</p>
+                </div>
+
+                <div class="canal-info">
+                    <div class="canal-avatar" id="canalAvatar">👤</div>
+                    <div>
+                        <h2 id="canalNome">Meu Canal</h2>
+                        <span id="canalContador">0 publicações</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Botão para publicar novo conteúdo -->
+            <div class="publicar-barra">
+                <a href="/frontend/pages/artigos/meus-artigos.html" class="btnPublicarNovo">
+                    ➕ Publicar Novo Conteúdo
+                </a>
+            </div>
+
+            <!-- Grade de publicações (estilo YouTube) -->
+            <div class="grade-publicacoes" id="gradePublicacoes">
+
+                <p class="carregando">Carregando suas publicações...</p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div class="container">
+            &copy; 2026 Portal de Ciência. Todos os direitos reservados.
+        </div>
+
+    </footer>
+
+    <section class="modal-container" id="modalVerPublicacao" style="display:none;">
+        <div class="modal-overlay" onclick="fecharModal()"></div>
+        <div class="modal-conteudo">
+            <button class="modal-fechar" onclick="fecharModal()">✕</button>
+            <div id="modalCorpo"></div>
+        </div>
+    </section>
+
+    <script src="/frontend/js/minhas-publicacoes.js"></script>
+    <script src="/frontend/js/menu.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Artigos - Portal Ciência</title>
+
+<link rel="stylesheet" href="/frontend/css/perfil.css">
+    <link rel="stylesheet" href="/frontend/css/styles.css">
+    <link rel="stylesheet" href="/frontend/css/meus-artigos.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="nav-container">
+
+                <div class="logo">
+                    <h2>🚀 Portal Ciência</h2>
+                </div>
+
+                <ul class="nav-menu">
+
+                    <li>
+                        <a href="/frontend/pages/index.html" class="nav-link">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="/frontend/pages/experimentos.html" class="nav-link">Experimentos</a>
+                    </li>
+
+                    <li>
+                        <a href="/frontend/pages/artigos/artigos.html" class="nav-link">Artigos</a>
+                    </li>
+
+                </ul>
+
+                <!-- Perfil do Usuário -->
+                <div id="perfilUsuario" class="perfil-usuario" style="display:none;">
+
+                    <div class="perfil-menu">
+
+                        <div class="avatar" id="avatarUsuario">
+                            👤
+                        </div>
+
+                        <span id="nomeUsuario"></span>
+
+                        <span class="seta">▼</span>
+
+                        <div class="dropdown">
+
+                            <a href="/frontend/pages/perfil.html">
+                                👤 Meu Perfil
+                            </a>
+
+                            <a href="/frontend/pages/editar-perfil.html">
+                                ✏️ Editar Perfil
+                            </a>
+
+                            <a href="/frontend/pages/alterar-senha.html">
+                                🔒 Alterar Senha
+                            </a>
+
+<a href="/frontend/pages/artigos/meus-artigos.html">
+                                📄 Meus Artigos
+                            </a>
+
+                            <a href="/frontend/pages/minhas-publicacoes.html">
+                                🎬 Minhas Publicações
+                            </a>
+
+                            <hr>
+
+                            <a href="#" id="btnLogout">
+                                🚪 Sair
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main class="meus-artigos-main">
+
+        <div class="container">
+
+            <h1 class="titulo-pagina">📄 Meus Artigos</h1>
+
+            <!-- Formulário de publicação -->
+            <div class="card artigo-card-form">
+
+                <h2>✍️ Publicar Novo Conteúdo</h2>
+
+                <form id="formPublicar">
+
+                    <div class="perfil-info">
+
+                        <p><strong>Título</strong></p>
+
+                        <input
+                            type="text"
+                            id="artigoTitulo"
+                            placeholder="Título do artigo"
+                            required
+                        >
+
+                        <p><strong>Conteúdo</strong></p>
+
+                        <textarea
+                            id="artigoConteudo"
+                            placeholder="Escreva aqui o conteúdo do seu artigo..."
+                            rows="6"
+                            required
+                        ></textarea>
+
+<p><strong>Imagem (arquivo)</strong></p>
+
+                        <input
+                            type="file"
+                            id="artigoImagem"
+                            accept="image/*"
+                            onchange="previewImagemArtigo(event)"
+                        >
+
+                        <div class="preview-imagem" id="previewImagemArtigo" style="display:none;">
+                            <img src="" alt="Pré-visualização da imagem do artigo">
+                        </div>
+
+                    </div>
+
+                    <button type="submit" id="btnPublicar">
+                        📤 Publicar
+                    </button>
+
+                </form>
+
+            </div>
+
+            <!-- Lista de artigos do usuário -->
+            <div class="card artigo-card-lista">
+
+                <h2>📚 Minhas Publicações</h2>
+
+                <div id="listaArtigos">
+
+                    <p class="carregando">Carregando seus artigos...</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div class="container">
+            &copy; 2026 Portal de Ciência. Todos os direitos reservados.
+        </div>
+
+    </footer>
+
+    <script src="/frontend/js/meus-artigos.js"></script>
+    <script src="/frontend/js/menu.js"></script>
+
+</body>
+
+</html>

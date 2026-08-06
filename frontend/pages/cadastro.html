@@ -6,7 +6,7 @@
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; 
     background: linear-gradient(135deg, #0a0f2c, #1a1f4d);
     color: white;
 }
@@ -70,15 +70,46 @@ a {
     <div class="card">
         <h1>Cadastro</h1>
 
-        <input type="text" placeholder="Nome">
-        <input type="email" placeholder="Email">
-        <input type="password" placeholder="Senha">
-        <input type="password" placeholder="Confirmar Senha">
+        <form id="cadastroForm">
 
-        <button>Cadastrar</button>
+            <input
+                type="text"
+                id="nome"
+                placeholder="Nome Completo"
+                required
+            >
+        
+            <input
+                type="email"
+                id="email"
+                placeholder="E-mail"
+                required
+            >
+        
+            <input
+                type="password"
+                id="senha"
+                placeholder="Senha"
+                required
+            >
+        
+            <input
+                type="password"
+                id="confirmarSenha"
+                placeholder="Confirmar Senha"
+                required
+            >
+        
+            <button type="submit">
+                Cadastrar
+            </button>
+        
+        </form>
 
-        <p>Já tem conta? <a href="/login.html">Fazer login</a></p>
+        <p>Já tem conta? <a href="/frontend/pages/login.html">Fazer login</a></p>
     </div>
 </div>
+<script src="/frontend/js/cadastro.js"></script>
+
 </body>
 </html>

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experimentos - Portal de Ciência</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/busca.css">
+    <link rel="stylesheet" href="/frontend/css/styles.css">
+    <link rel="stylesheet" href="/frontend/css/busca.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
@@ -16,14 +16,31 @@
                 <div class="logo">
                     <h2>🚀 Portal Ciência</h2>
                 </div>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="experimentos.html" class="nav-link active">Experimentos</a></li>
-                    <li><a href="artigos.html" class="nav-link">Artigos</a></li>
-                    <li><a href="login.html" class="nav-link">login</a></li>
-                    <li><a href="cadastro.html" class="nav-link">cadastro</a></li>
+<ul class="nav-menu">
+                    <li><a href="/frontend/pages/index.html" class="nav-link">Home</a></li>
+                    <li><a href="/frontend/pages/experimentos.html" class="nav-link active">Experimentos</a></li>
+                    <li><a href="/frontend/pages/artigos/artigos.html" class="nav-link">Artigos</a></li>
+                    <li id="menuLogin"><a href="/frontend/pages/login.html" class="nav-link">login</a></li>
+                    <li id="menuCadastro"><a href="/frontend/pages/cadastro.html" class="nav-link">cadastro</a></li>
                 
                 </ul>
+
+                <!-- Perfil do Usuário -->
+                <div id="perfilUsuario" class="perfil-usuario" style="display:none;">
+                    <div class="perfil-menu">
+                        <div class="avatar" id="avatarUsuario">👤</div>
+                        <span id="nomeUsuario"></span>
+                        <span class="seta">▼</span>
+                        <div class="dropdown">
+                            <a href="/frontend/pages/perfil.html">👤 Meu Perfil</a>
+                            <a href="/frontend/pages/editar-perfil.html">✏️ Editar Perfil</a>
+                            <a href="/frontend/pages/alterar-senha.html">🔒 Alterar Senha</a>
+                            <a href="/frontend/pages/artigos/meus-artigos.html">📄 Meus Artigos</a>
+                            <hr>
+                            <a href="#" id="btnLogout">🚪 Sair</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
@@ -59,7 +76,7 @@
                 onclick="window.location.href='vulcao.html'">
 
                     <img 
-                    src="img/partes-vulcao.webp"
+                    src="/frontend/img/partes-vulcao.webp"
                     alt="Vulcão Caseiro">
 
                     <div class="experiment-content">
@@ -84,7 +101,7 @@
                 onclick="window.location.href='eletrons.html'">
 
                     <img 
-                    src="img/eletrons.webp"
+                    src="/frontend/img/eletrons.webp"
                     alt="Dança dos Elétrons">
 
                     <div class="experiment-content">
@@ -109,7 +126,7 @@
                 onclick="window.location.href='cristais.html'">
 
                     <img 
-                    src="img/cristal.jpg"
+                    src="/frontend/img/cristal.jpg"
                     alt="Cristais Mágicos">
 
                     <div class="experiment-content">
@@ -137,8 +154,9 @@
         </div>
     </footer>
 
-    <script src="js/dados.js"></script>
-    <script src="js/busca.js"></script>
-    <script src="js/script.js"></script>
+<script src="/frontend/js/dados.js"></script>
+    <script src="/frontend/js/busca.js"></script>
+    <script src="/frontend/js/script.js"></script>
+    <script src="/frontend/js/menu.js"></script>
 </body>
 </html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Senha - Portal Ciência</title>
+
+    <link rel="stylesheet" href="/frontend/css/perfil.css">
+    <link rel="stylesheet" href="/frontend/css/styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="nav-container">
+
+                <div class="logo">
+                    <h2>🚀 Portal Ciência</h2>
+                </div>
+
+                <ul class="nav-menu">
+
+                    <li>
+                        <a href="/frontend/pages/index.html" class="nav-link">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="/frontend/pages/experimentos.html" class="nav-link">Experimentos</a>
+                    </li>
+
+                    <li>
+                        <a href="/frontend/pages/artigos/artigos.html" class="nav-link">Artigos</a>
+                    </li>
+
+                </ul>
+
+                <!-- Perfil do Usuário -->
+                <div id="perfilUsuario" class="perfil-usuario" style="display:none;">
+
+                    <div class="perfil-menu">
+
+                        <div class="avatar" id="avatarUsuario">
+                            👤
+                        </div>
+
+                        <span id="nomeUsuario"></span>
+
+                        <span class="seta">▼</span>
+
+                        <div class="dropdown">
+
+                            <a href="/frontend/pages/perfil.html">
+                                👤 Meu Perfil
+                            </a>
+
+                            <a href="/frontend/pages/editar-perfil.html">
+                                ✏️ Editar Perfil
+                            </a>
+
+                            <a href="/frontend/pages/alterar-senha.html">
+                                🔒 Alterar Senha
+                            </a>
+
+<a href="/frontend/pages/artigos/meus-artigos.html">
+                                📄 Meus Artigos
+                            </a>
+
+                            <a href="/frontend/pages/minhas-publicacoes.html">
+                                🎬 Minhas Publicações
+                            </a>
+
+                            <hr>
+
+                            <a href="#" id="btnLogout">
+                                🚪 Sair
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main class="perfil-main">
+
+        <div class="container">
+
+            <div class="perfil-card">
+
+                <h1>🔒 Alterar Senha</h1>
+
+                <form id="formAlterarSenha">
+
+                    <div class="perfil-info">
+
+                        <p><strong>Senha Atual</strong></p>
+
+                        <input
+                            type="password"
+                            id="senhaAtual"
+                            placeholder="Digite sua senha atual"
+                            required
+                        >
+
+                        <p><strong>Nova Senha</strong></p>
+
+                        <input
+                            type="password"
+                            id="novaSenha"
+                            placeholder="Mínimo de 6 caracteres"
+                            required
+                        >
+
+                        <p><strong>Confirmar Nova Senha</strong></p>
+
+                        <input
+                            type="password"
+                            id="confirmarNovaSenha"
+                            placeholder="Repita a nova senha"
+                            required
+                        >
+
+                    </div>
+
+                    <button type="submit" id="btnAlterarSenha">
+                        Alterar Senha
+                    </button>
+
+                </form>
+
+                <a href="/frontend/pages/perfil.html">
+                    ← Voltar para Meu Perfil
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div class="container">
+            &copy; 2026 Portal de Ciência. Todos os direitos reservados.
+        </div>
+
+    </footer>
+
+    <script src="/frontend/js/alterar-senha.js"></script>
+    <script src="/frontend/js/menu.js"></script>
+
+</body>
+
+</html>

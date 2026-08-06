@@ -398,7 +398,8 @@ body {
 
 .article-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    box-shadow: 0 20px 60px rgb(3, 13, 79);
+    cursor: pointer;
 }
 
 .article-image img {
@@ -533,4 +534,197 @@ footer {
     color: purple;
     margin-top: 20px;
    
+}
+
+/* ========================= */
+/* PERFIL DO USUÁRIO */
+/* ========================= */
+
+.nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.perfil-usuario{
+    margin-left: 20px;
+}
+
+.perfil-usuario a{
+    text-decoration: none;
+}
+
+.avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg,#00cfff,#0077ff);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 0 0 15px rgba(0,210,255,.6);
+}
+
+.avatar:hover{
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(0,210,255,.9);
+}
+
+/* =======================
+   MENU DO PERFIL
+======================= */
+
+.perfil-usuario{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.perfil-menu{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    cursor:pointer;
+
+}
+
+.avatar{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    background:#00d2ff;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:bold;
+
+    font-size:20px;
+
+    box-shadow:0 0 15px #00d2ff;
+
+}
+
+#nomeUsuario{
+
+    color:white;
+
+    font-weight:bold;
+
+    font-size:16px;
+
+}
+
+.seta{
+
+    color:white;
+
+    font-size:12px;
+
+}
+
+.dropdown{
+
+    display:none;
+
+    position:absolute;
+
+    top:100%;
+
+    right:0;
+
+    background:#111133;
+
+    border-radius:10px;
+
+    min-width:220px;
+
+    overflow:hidden;
+
+    box-shadow:0 0 20px rgba(0,0,0,.5);
+
+    margin-top:8px;
+
+}
+
+/* Ponte invisível para não perder o hover ao mover o mouse */
+.dropdown::before{
+
+    content:'';
+
+    position:absolute;
+
+    top:-10px;
+
+    left:0;
+
+    right:0;
+
+    height:10px;
+
+    background:transparent;
+
+}
+
+.dropdown a{
+
+    display:block;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px;
+
+    transition:.3s;
+
+}
+
+.dropdown a:hover{
+
+    background:#00d2ff;
+
+}
+
+.perfil-menu:hover .dropdown{
+
+    display:block;
+
+}
+
+@media (max-width: 768px) {
+
+    .perfil-usuario{
+        margin-left: 0;
+    }
+
 }
