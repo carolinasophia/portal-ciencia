@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Teorias | Portal Ciência</title>
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/teorias.css"
+    >
+
+    <!-- Fonte futurista -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="navbar">
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+            <span>⚛</span>
+            Portal Ciência
+        </a>
+
+        <nav class="menu">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="experimentos.html">
+                Experimentos
+            </a>
+
+            <a
+                href="teorias.html"
+                class="ativo"
+            >
+                Teoria
+            </a>
+
+            <a href="artigos.html">
+                Artigos
+            </a>
+
+            <a href="login.html">
+                Login
+            </a>
+
+            <a href="cadastro.html">
+                Cadastro
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+    ====================================================== -->
+
+    <main>
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <section class="hero">
+
+            <div class="hero-conteudo">
+
+                <span class="hero-tag">
+                    CONHECIMENTO CIENTÍFICO
+                </span>
+
+                <h1>
+                    Teorias Científicas
+                </h1>
+
+                <p>
+                    Explore teorias que ajudam a explicar
+                    fenômenos da natureza, da vida,
+                    da matéria e do Universo.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PESQUISA E FILTROS
+        ================================================== -->
+
+        <section class="filtros-section">
+
+            <div class="filtros-container">
+
+                <!-- PESQUISA -->
+
+                <div class="campo-pesquisa">
+
+                    <span class="icone-pesquisa">
+                        🔎
+                    </span>
+
+                    <input
+                        type="text"
+                        id="campoPesquisa"
+                        placeholder="Pesquisar por teoria, área ou conteúdo..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <!-- FILTRO -->
+
+                <div class="campo-filtro">
+
+                    <select id="filtroArea">
+
+                        <option value="">
+                            Todas as áreas
+                        </option>
+
+                        <option value="Física">
+                            Física
+                        </option>
+
+                        <option value="Biologia">
+                            Biologia
+                        </option>
+
+                        <option value="Astronomia">
+                            Astronomia
+                        </option>
+
+                        <option value="Química">
+                            Química
+                        </option>
+
+                        <option value="Matemática">
+                            Matemática
+                        </option>
+
+                        <option value="Ciências da Terra">
+                            Ciências da Terra
+                        </option>
+
+                        <option value="Ciências">
+                            Ciências
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             INFORMAÇÕES
+        ================================================== -->
+
+        <section class="informacoes">
+
+            <div>
+
+                <span class="secao-tag">
+                    EXPLORAÇÃO CIENTÍFICA
+                </span>
+
+                <h2>
+                    Teorias disponíveis
+                </h2>
+
+                <p id="contadorTeorias">
+                    Carregando teorias...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             LISTA DE TEORIAS
+        ================================================== -->
+
+        <section
+            class="teorias-container"
+            id="teoriasContainer"
+        >
+
+            <!--
+                O teorias.js irá inserir
+                os cards das teorias aqui.
+            -->
+
+            <div class="estado-carregando">
+
+                <div class="spinner"></div>
+
+                <p>
+                    Carregando teorias científicas...
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="footer-conteudo">
+
+            <div class="footer-logo">
+
+                <span>⚛</span>
+                Portal Ciência
+
+            </div>
+
+            <p>
+                Conhecimento científico acessível para todos.
+            </p>
+
+            <div class="footer-linha"></div>
+
+            <p class="copyright">
+                © 2026 Portal Ciência.
+                Todos os direitos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="../js/teorias.js"></script>
+
+</body>
+
+</html>

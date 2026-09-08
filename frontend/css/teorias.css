@@ -1,0 +1,1072 @@
+/* =========================================================
+   PORTAL CIÊNCIA
+   TEORIAS.CSS
+   ========================================================= */
+
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    font-family: "Orbitron", Arial, sans-serif;
+    color: #ffffff;
+
+    background:
+        radial-gradient(circle at 15% 20%, rgba(0, 204, 255, 0.10), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(75, 0, 255, 0.10), transparent 30%),
+        radial-gradient(circle at 50% 80%, rgba(0, 180, 255, 0.06), transparent 30%),
+        linear-gradient(
+            180deg,
+            #0d1033 0%,
+            #16194d 50%,
+            #080a20 100%
+        );
+}
+
+/* =========================================================
+   ESTRELAS / FUNDO ESPACIAL
+   ========================================================= */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background-image:
+        radial-gradient(circle, rgba(255, 255, 255, 0.75) 1px, transparent 1px),
+        radial-gradient(circle, rgba(0, 217, 255, 0.45) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.35) 1px, transparent 1px);
+
+    background-size:
+        170px 170px,
+        250px 250px,
+        320px 320px;
+
+    background-position:
+        20px 30px,
+        100px 140px,
+        180px 80px;
+
+    opacity: 0.20;
+
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+    width: 100%;
+    min-height: 68px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 13%;
+
+    background: rgba(9, 10, 36, 0.96);
+
+    position: relative;
+    z-index: 10;
+}
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #09d9ff;
+
+    text-decoration: none;
+
+    font-size: 27px;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    text-shadow:
+        0 0 5px #00d9ff,
+        0 0 15px rgba(0, 217, 255, 0.75),
+        0 0 30px rgba(0, 217, 255, 0.35);
+}
+
+.logo span {
+    font-size: 1em;
+
+    text-shadow:
+        0 0 8px #00d9ff,
+        0 0 20px #00d9ff;
+}
+
+/* =========================================================
+   MENU
+   ========================================================= */
+
+.menu {
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+}
+
+.menu a {
+    position: relative;
+
+    padding: 10px 18px;
+
+    border-radius: 30px;
+
+    color: #e8e8f7;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+.menu a:hover {
+    color: #00d9ff;
+
+    background: rgba(0, 183, 255, 0.08);
+
+    box-shadow:
+        0 0 15px rgba(0, 217, 255, 0.12);
+}
+
+.menu a.ativo {
+    color: #00d9ff;
+
+    background: rgba(0, 119, 255, 0.18);
+
+    box-shadow:
+        0 0 20px rgba(0, 183, 255, 0.10);
+}
+
+.menu a.ativo::after {
+    display: none;
+}
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+main {
+    width: 100%;
+    min-height: calc(100vh - 68px);
+
+    padding-bottom: 80px;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    width: 100%;
+    min-height: 450px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 45px 6% 20px;
+
+    text-align: center;
+
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background: radial-gradient(
+        circle,
+        rgba(0, 217, 255, 0.08),
+        transparent 70%
+    );
+
+    pointer-events: none;
+}
+
+.hero-conteudo {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================================================
+   TAG DO HERO
+   ========================================================= */
+
+.hero-tag {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: #00d9ff;
+
+    font-size: clamp(12px, 1.2vw, 17px);
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    text-shadow:
+        0 0 8px rgba(0, 217, 255, 0.8);
+}
+
+/* =========================================================
+   TÍTULO PRINCIPAL
+   ========================================================= */
+
+.hero h1 {
+    margin-bottom: 20px;
+
+    color: #ffffff;
+
+    font-size: clamp(50px, 6vw, 80px);
+
+    font-weight: 800;
+
+    line-height: 1.1;
+
+    text-align: center;
+
+    text-shadow:
+        0 0 8px rgba(255, 255, 255, 0.9),
+        0 0 20px rgba(0, 217, 255, 0.8),
+        0 0 45px rgba(0, 217, 255, 0.45);
+}
+
+/* =========================================================
+   DESCRIÇÃO
+   ========================================================= */
+
+.hero p {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    color: #dce8ff;
+
+    font-family: Arial, sans-serif;
+
+    font-size: clamp(16px, 1.5vw, 21px);
+
+    line-height: 1.8;
+
+    text-align: center;
+}
+
+/* =========================================================
+   FILTROS
+   ========================================================= */
+
+.filtros-section {
+    width: 100%;
+
+    margin-top: -35px;
+
+    padding: 0 6% 35px;
+}
+
+.filtros-container {
+    width: 100%;
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+}
+
+/* =========================================================
+   CAMPO DE PESQUISA
+   ========================================================= */
+
+.campo-pesquisa {
+    flex: 1;
+
+    min-height: 62px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 22px;
+
+    border: 1px solid rgba(0, 217, 255, 0.70);
+
+    border-radius: 35px;
+
+    background: rgba(3, 10, 35, 0.75);
+
+    box-shadow:
+        0 0 15px rgba(0, 217, 255, 0.08),
+        inset 0 0 20px rgba(0, 217, 255, 0.03);
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.campo-pesquisa:focus-within {
+    border-color: #00d9ff;
+
+    box-shadow:
+        0 0 15px rgba(0, 217, 255, 0.25),
+        0 0 35px rgba(0, 217, 255, 0.10),
+        inset 0 0 20px rgba(0, 217, 255, 0.05);
+}
+
+.icone-pesquisa {
+    margin-right: 12px;
+
+    font-size: 22px;
+
+    filter:
+        drop-shadow(0 0 5px #00d9ff);
+}
+
+.campo-pesquisa input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 17px;
+}
+
+.campo-pesquisa input::placeholder {
+    color: #8795b9;
+}
+
+/* =========================================================
+   FILTRO DE ÁREA
+   ========================================================= */
+
+.campo-filtro {
+    width: 280px;
+}
+
+.campo-filtro select {
+    width: 100%;
+    min-height: 62px;
+
+    padding: 0 20px;
+
+    border: 1px solid rgba(0, 217, 255, 0.60);
+
+    border-radius: 35px;
+
+    outline: none;
+
+    background: rgba(3, 10, 35, 0.85);
+
+    color: #ffffff;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 15px rgba(0, 217, 255, 0.07);
+
+    transition: 0.3s ease;
+}
+
+.campo-filtro select:hover,
+.campo-filtro select:focus {
+    border-color: #00d9ff;
+
+    box-shadow:
+        0 0 15px rgba(0, 217, 255, 0.25);
+}
+
+.campo-filtro option {
+    background: #0b1035;
+    color: #ffffff;
+}
+
+/* =========================================================
+   INFORMAÇÕES
+   ========================================================= */
+
+.informacoes {
+    width: 100%;
+
+    padding: 20px 6% 35px;
+}
+
+.informacoes > div {
+    max-width: 1150px;
+
+    margin: 0 auto;
+}
+
+.secao-tag {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #00d9ff;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 8px rgba(0, 217, 255, 0.6);
+}
+
+.informacoes h2 {
+    color: #ffffff;
+
+    font-size: clamp(28px, 3vw, 40px);
+
+    margin-bottom: 10px;
+
+    text-shadow:
+        0 0 12px rgba(0, 217, 255, 0.25);
+}
+
+.informacoes p {
+    color: #9ba9ca;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+}
+
+/* =========================================================
+   CONTAINER DOS CARDS
+   ========================================================= */
+
+.teorias-container {
+    width: 100%;
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    padding: 0 6%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 28px;
+}
+
+/* =========================================================
+   CARD DE TEORIA
+   ========================================================= */
+
+.teoria-card {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 28px;
+
+    min-height: 280px;
+
+    border: 1px solid rgba(0, 217, 255, 0.20);
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(14, 24, 70, 0.92),
+            rgba(6, 10, 35, 0.95)
+        );
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.teoria-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 160px;
+    height: 160px;
+
+    top: -80px;
+    right: -80px;
+
+    background: radial-gradient(
+        circle,
+        rgba(0, 217, 255, 0.18),
+        transparent 70%
+    );
+
+    pointer-events: none;
+}
+
+.teoria-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(0, 217, 255, 0.75);
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.35),
+        0 0 25px rgba(0, 217, 255, 0.12);
+}
+
+/* =========================================================
+   ÁREA / CATEGORIA
+   ========================================================= */
+
+.teoria-area,
+.teoria-categoria {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    padding: 7px 14px;
+
+    border: 1px solid rgba(0, 217, 255, 0.35);
+
+    border-radius: 20px;
+
+    color: #00d9ff;
+
+    background: rgba(0, 217, 255, 0.07);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+/* =========================================================
+   TÍTULO DO CARD
+   ========================================================= */
+
+.teoria-card h2,
+.teoria-card h3 {
+    margin-bottom: 15px;
+
+    color: #ffffff;
+
+    font-size: 23px;
+
+    line-height: 1.35;
+
+    text-shadow:
+        0 0 10px rgba(0, 217, 255, 0.20);
+}
+
+/* =========================================================
+   TEXTO DO CARD
+   ========================================================= */
+
+.teoria-card p {
+    color: #b7c4df;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+.teoria-card .cientista {
+    margin-top: 12px;
+
+    color: #8290b0;
+}
+
+/* =========================================================
+   BOTÃO / LINK
+   ========================================================= */
+
+.teoria-card a,
+.btn-ver {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 11px 20px;
+
+    border: 1px solid #00d9ff;
+
+    border-radius: 25px;
+
+    color: #00d9ff;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.teoria-card a:hover,
+.btn-ver:hover {
+    color: #05101e;
+
+    background: #00d9ff;
+
+    box-shadow:
+        0 0 20px rgba(0, 217, 255, 0.35);
+}
+
+/* =========================================================
+   CARREGANDO
+   ========================================================= */
+
+.estado-carregando {
+    grid-column: 1 / -1;
+
+    min-height: 300px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    text-align: center;
+}
+
+.estado-carregando p {
+    color: #aab6d4;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+}
+
+/* =========================================================
+   SPINNER
+   ========================================================= */
+
+.spinner {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    border: 4px solid rgba(0, 217, 255, 0.15);
+
+    border-top-color: #00d9ff;
+
+    animation: girar 1s linear infinite;
+
+    box-shadow:
+        0 0 15px rgba(0, 217, 255, 0.15);
+}
+
+@keyframes girar {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =========================================================
+   MENSAGEM DE ERRO
+   ========================================================= */
+
+.estado-erro {
+    grid-column: 1 / -1;
+
+    min-height: 300px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px;
+}
+
+.estado-erro .icone-erro {
+    font-size: 50px;
+
+    margin-bottom: 20px;
+
+    filter:
+        drop-shadow(0 0 10px rgba(255, 180, 0, 0.6));
+}
+
+.estado-erro h3 {
+    margin-bottom: 12px;
+
+    font-size: 25px;
+
+    color: #ffffff;
+}
+
+.estado-erro p {
+    margin-bottom: 25px;
+
+    color: #9daac8;
+
+    font-family: Arial, sans-serif;
+}
+
+/* =========================================================
+   BOTÃO TENTAR NOVAMENTE
+   ========================================================= */
+
+.btn-tentar {
+    border: none;
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    background: #00d9ff;
+
+    color: #03101b;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 15px rgba(0, 217, 255, 0.35);
+
+    transition: 0.3s ease;
+}
+
+.btn-tentar:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 25px rgba(0, 217, 255, 0.55);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    width: 100%;
+
+    margin-top: 50px;
+
+    padding: 45px 6% 30px;
+
+    background: rgba(4, 7, 25, 0.95);
+
+    border-top: 1px solid rgba(0, 217, 255, 0.15);
+}
+
+.footer-conteudo {
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.footer-logo {
+    margin-bottom: 12px;
+
+    color: #00d9ff;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    text-shadow:
+        0 0 10px rgba(0, 217, 255, 0.6);
+}
+
+.footer-logo span {
+    margin-right: 8px;
+}
+
+.footer-conteudo > p {
+    color: #8996b5;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+}
+
+.footer-linha {
+    width: 100%;
+    max-width: 600px;
+
+    height: 1px;
+
+    margin: 25px auto;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(0, 217, 255, 0.5),
+        transparent
+    );
+}
+
+.footer-conteudo .copyright {
+    color: #5f6b88;
+
+    font-size: 12px;
+}
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .menu {
+        gap: 8px;
+    }
+
+    .menu a {
+        padding: 9px 12px;
+        font-size: 14px;
+    }
+
+    .filtros-section,
+    .informacoes {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .teorias-container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        min-height: auto;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 20px;
+    }
+
+    .menu {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 6px;
+    }
+
+    .menu a {
+        font-size: 14px;
+
+        padding: 10px 13px;
+    }
+
+    .hero {
+        min-height: 400px;
+
+        padding: 60px 7% 30px;
+    }
+
+    .hero h1 {
+        font-size: clamp(42px, 8vw, 64px);
+    }
+
+    .filtros-section {
+        margin-top: -15px;
+    }
+
+    .filtros-container {
+        flex-direction: column;
+    }
+
+    .campo-pesquisa,
+    .campo-filtro {
+        width: 100%;
+    }
+
+    .campo-filtro {
+        width: 100%;
+    }
+
+    .teorias-container {
+        grid-template-columns: 1fr;
+
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
+@media (max-width: 550px) {
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .menu {
+        gap: 3px;
+    }
+
+    .menu a {
+        font-size: 11px;
+
+        padding: 8px 9px;
+    }
+
+    .hero {
+        min-height: 360px;
+
+        padding: 55px 20px 25px;
+    }
+
+    .hero-tag {
+        font-size: 10px;
+
+        letter-spacing: 2px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+
+        line-height: 1.08;
+    }
+
+    .hero p {
+        font-size: 15px;
+
+        line-height: 1.6;
+    }
+
+    .filtros-section {
+        margin-top: -5px;
+
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .campo-pesquisa {
+        min-height: 58px;
+
+        padding: 0 18px;
+    }
+
+    .campo-pesquisa input {
+        font-size: 15px;
+    }
+
+    .campo-filtro select {
+        min-height: 58px;
+
+        font-size: 15px;
+    }
+
+    .informacoes {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .informacoes h2 {
+        font-size: 30px;
+    }
+
+    .teorias-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .teoria-card {
+        padding: 22px;
+    }
+
+    footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
